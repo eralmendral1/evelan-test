@@ -61,7 +61,7 @@ const Users: React.FC = () => {
 
         <div className='w-full flex flex-wrap gap-4 items-center justify-center'>
             {users.map((user: User) => {
-                return <UserCard {...user} />
+                return <UserCard key={user.id} {...user} />
             })}
         </div>
 
