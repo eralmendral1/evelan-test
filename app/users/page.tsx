@@ -25,11 +25,10 @@ const UserCard: React.FC<User> = ({ id, first_name, last_name, email, avatar }) 
                     </div>
                 </div>
                 <p className='mt-2'>{id}</p>
-                <p className='text-xs sm:text-sm md:text-base font-semibold text-center'>Ricardo Boveta</p>
+                <p className='my-1'>{email}</p>
+                <p className='text-xs sm:text-sm md:text-base font-semibold text-center my-1'>{fullName}</p>
             </div>
         </div>
-        <h1>{email}</h1>
-        <h1>{fullName}</h1>
     </div>
 }
 
