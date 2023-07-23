@@ -18,7 +18,10 @@ const UserCard: React.FC<User> = ({ id, first_name, last_name, email, avatar }) 
                     alt={fullName}
                     width={120}
                     height={120}
+                    unoptimized={true}
+                    priority
                 />
+
                 <p className='mt-2'>{id}</p>
                 <p className='text-xs sm:text-sm md:text-base font-semibold text-center'>Ricardo Boveta</p>
             </div>
