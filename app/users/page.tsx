@@ -8,20 +8,22 @@ const URL: string = 'https://reqres.in/api/users'
 const UserCard: React.FC<User> = ({ id, first_name, last_name, email, avatar }) => {
     const fullName = `${first_name} ${last_name}`
 
-    return <div className='xl:w-1/4 sm:w-1/2 w-full 2xl:w-1/5 flex flex-col items-center py-12 md:py-6 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg text-white'>
+    return <div className='xl:w-1/4 sm:w-1/2 w-full 2xl:w-1/5 flex flex-col items-center py-12 md:py-6 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg text-white'>
         <div className='w-full flex items-center justify-center'>
             <div className='flex flex-col items-center'>
-                <Image
-                    className='rounded'
-                    loader={() => avatar}
-                    src={avatar}
-                    alt={fullName}
-                    width={120}
-                    height={120}
-                    unoptimized={true}
-                    priority
-                />
-
+                <div className="avatar">
+                    <div className="w-32 rounded-xl">
+                        <Image
+                            loader={() => avatar}
+                            src={avatar}
+                            alt={fullName}
+                            width={120}
+                            height={120}
+                            unoptimized={true}
+                            priority
+                        />
+                    </div>
+                </div>
                 <p className='mt-2'>{id}</p>
                 <p className='text-xs sm:text-sm md:text-base font-semibold text-center'>Ricardo Boveta</p>
             </div>
